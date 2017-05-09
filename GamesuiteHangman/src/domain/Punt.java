@@ -17,10 +17,11 @@ public class Punt {
 		return this.y;
 	}
 	
-	public boolean equals(Object object){
-		if (this.x && this.y == object.y ){
-			
+	public boolean equals(Punt p){
+		if (this.x == p.getX() && this.y == p.getY() ){
+			return true;
 		}
+		return false;
 	}
 	
 	public String toString(){
