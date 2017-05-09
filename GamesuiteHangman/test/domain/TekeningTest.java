@@ -13,8 +13,8 @@ public class TekeningTest {
 	private Vorm deur;
 	private Vorm raam;
 	private Vorm deurknop;
-	private Vorm raambalk1;
-	private Vorm raambalk2;
+	private LijnStuk raambalk1;
+	private LijnStuk raambalk2;
 	private Vorm schouwNietInTekening;
 	
 	@Before

@@ -1,11 +1,11 @@
 package domain;
 
-public class Lijnstuk {
+public class LijnStuk extends Vorm{
 	private Punt startpunt;
 	private Punt eindpunt;
 	private Punt punt = new Punt();
 
-	public Lijnstuk(Punt startpunt, Punt eindpunt) {
+	public LijnStuk(Punt startpunt, Punt eindpunt) {
 		setStartEnEindPunten(startpunt, eindpunt);
 
 	}
@@ -28,8 +28,8 @@ public class Lijnstuk {
 
 	public boolean equals(Object object) {
 		boolean resultaat = false;
-		if (object instanceof Lijnstuk) {
-			Lijnstuk figuur = (Lijnstuk) object;
+		if (object instanceof LijnStuk) {
+			LijnStuk figuur = (LijnStuk) object;
 			if( figuur.getStartpunt().equals(figuur.getEindpunt())){
 				return true;
 			}
