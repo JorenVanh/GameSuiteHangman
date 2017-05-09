@@ -18,7 +18,9 @@ public class Punt {
 	}
 	
 	public boolean equals(Punt p){
-		if (this.x == p.getX() && this.y == p.getY() ){
+		
+		if (p != null && this.x == p.getX() && this.y == p.getY() ){
+			
 			return true;
 		}
 		return false;
