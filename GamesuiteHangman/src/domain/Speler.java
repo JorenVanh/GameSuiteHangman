@@ -1,11 +1,17 @@
 package domain;
 
+import ui.DomainException;
+
 public class Speler {
 	private String naam;
 	private int score;
 
 	public Speler(String naam) {
-		this.naam= naam;
+		if ( naam == null||naam.trim().isEmpty()) {
+			throw new DomainException("Naam mag niet leeg zijn!");
+		} else {
+			this.naam = naam;
+		}
 	}
 
 	public String getNaam() {
@@ -19,10 +25,18 @@ public class Speler {
 	private void setScore(int score) {
 		this.score = score;
 	}
-	public int addToScore(int score){
-		return score++;
-	}
 
+	public int addToScore(int score) {
+		if (this.score + score < 0) {
+			throw new DomainException("Score negatief!");
+		}
+		if (score < 0 && this.score + score < 0) {
+			throw new IllegalArgumentException();
+		} else {
+			return this.score += score;
+		}
+
+	}
 
 	@Override
 	public boolean equals(Object obj) {
@@ -45,12 +59,7 @@ public class Speler {
 
 	@Override
 	public String toString() {
-		return "Speler:"  + naam + "heeft als score:" + score;
+		return "Speler:" + naam + "heeft als score:" + score;
 	}
-	
-	
-	
-	
 
-	
 }
