@@ -2,7 +2,7 @@ package domain;
 
 import java.awt.HeadlessException;
 
-public class Driehoek {
+public class Driehoek extends Vorm{
 	private Punt hoekPunt1, hoekPunt2, hoekPunt3;
 	
 	public Driehoek(Punt hoekPunt1, Punt hoekPunt2, Punt hoekPunt3){
