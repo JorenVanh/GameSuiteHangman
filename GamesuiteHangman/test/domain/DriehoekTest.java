@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import ui.DomainException;
+
 public class DriehoekTest {
 	private Punt punt1 = new Punt(10, 20);
 	private Punt zelfdeAlsPunt1 = new Punt(10, 20);
