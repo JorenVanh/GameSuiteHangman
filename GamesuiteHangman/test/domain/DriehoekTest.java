@@ -65,5 +65,14 @@ public class DriehoekTest {
 		Driehoek drieHoek = new Driehoek(punt1, punt2, punt3);
 		assertFalse(drieHoek.equals(null));
 	}
+	
+	@Test
+	public void equals_moet_true_teruggeven_als_dezelfde_punten_heeft(){
+		Driehoek driehoek = new Driehoek(punt1,punt2,punt3);
+		Driehoek driehoek2 = new Driehoek(punt3,punt1,punt2);
+		
+		assertTrue(driehoek.equals(driehoek2));
+		
+	}
 
 }
