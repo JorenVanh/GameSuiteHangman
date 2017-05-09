@@ -2,6 +2,7 @@ package ui;
 
 import javax.swing.JOptionPane;
 
+import domain.Punt;
 import domain.Speler;
 
 public class Launcher {
@@ -12,6 +13,7 @@ public class Launcher {
 		PictionaryUi ui = new PictionaryUi(speler);
 		ui.showMenu();
 		JOptionPane.showMessageDialog(null, "... zal binnekort spelen", speler.getNaam(), JOptionPane.INFORMATION_MESSAGE);
+		
+		//Punt punt = new Punt();
 	}
-
 }
