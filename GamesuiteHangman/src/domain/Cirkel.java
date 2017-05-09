@@ -43,6 +43,13 @@ public class Cirkel {
 		}
 		return false;
 	}
+
+	@Override
+	public String toString() {
+		return "Cirkel met radius" + radius + "en middelpunt" + middelpunt;
+	}
+	
+	
 	
 	
 

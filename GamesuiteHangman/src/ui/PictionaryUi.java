@@ -4,7 +4,7 @@ import domain.*;
 import javax.swing.JOptionPane;
 
 public class PictionaryUi {
-	private Speler speler = new Speler();
+	private Speler speler ;
 	
 	public PictionaryUi(Speler speler){
 		this.speler = speler;
@@ -16,6 +16,12 @@ public class PictionaryUi {
 		
 		Punt p = new Punt(x,y);
 		JOptionPane.showConfirmDialog(null,"U heeft een correct punt aangemaakt: " + p.toString());
+		int straal = Integer.parseInt(JOptionPane.showInputDialog("Radius van de cirkel:"));
+		
+		Cirkel cirkel = new Cirkel(p, straal);
+		JOptionPane.showConfirmDialog(null, "U heeft een correct cirkel aangemaakt: Cirkel: middelPunt" + p + " - Straal  - " + straal);
+		
+		
 	}
 	
 }
