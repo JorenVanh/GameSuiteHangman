@@ -1,6 +1,5 @@
 package domain;
 
-import ui.DomainException;
 
 public class Speler {
 	private String naam;
