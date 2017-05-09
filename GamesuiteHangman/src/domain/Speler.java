@@ -1,5 +1,9 @@
 package domain;
 
+<<<<<<< HEAD
+=======
+import domain.DomainException;
+>>>>>>> 4f7a6c4ef981eee1e6356d7487d31b141b7b6191
 
 public class Speler {
 	private String naam;
