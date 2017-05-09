@@ -72,7 +72,6 @@ public class DriehoekTest {
 		Driehoek driehoek2 = new Driehoek(punt3,punt1,punt2);
 		
 		assertTrue(driehoek.equals(driehoek2));
-		
 	}
 
 }
