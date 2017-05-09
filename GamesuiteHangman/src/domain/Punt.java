@@ -17,13 +17,16 @@ public class Punt {
 		return this.y;
 	}
 	
-	public boolean equals(Punt p){
+	public boolean equals (Object object){
+		boolean resultaat = false;
 		
-		if (p != null && this.x == p.getX() && this.y == p.getY() ){
+		if (object instanceof Punt){
+			Punt figuur = (Punt)object;
+			resultaat = this.getX() == figuur.getX() && this.getY()==figuur.getY();
 			
-			return true;
 		}
-		return false;
+		
+	return resultaat;
 	}
 	
 	public String toString(){
