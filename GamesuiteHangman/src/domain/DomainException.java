@@ -1,6 +1,6 @@
-package ui;
+package domain;
 
-public class DomainException extends Exception {
+public class DomainException extends RuntimeException {
 	
 
 	public DomainException(String message){
