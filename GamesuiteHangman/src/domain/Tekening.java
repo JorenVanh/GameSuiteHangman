@@ -30,8 +30,15 @@ public class Tekening {
 	
 	
 	public void voegToe(Vorm vorm){
+		
 		if (vorm==null){
 			throw new DomainException("De vorm mag niet null zijn");
+		}
+		if (vorm.getOmhullende().getLinkerBovenhoek().getX()<min_x || vorm.getOmhullende().getLinkerBovenhoek().getY()>max_y
+			|| (vorm.getOmhullende().getLinkerBovenhoek().getX()+vorm.getOmhullende().getBreedte())>max_x
+			|| (vorm.getOmhullende().getLinkerBovenhoek().getY()-vorm.getOmhullende().getHoogte())<min_y ){
+			throw new DomainException("De vorm past niet in de tekening");
+						
 		}
 		int i =0;
 		for(Vorm v : tekening){
