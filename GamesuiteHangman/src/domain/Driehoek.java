@@ -61,8 +61,21 @@ public class Driehoek extends Vorm{
 
 	@Override
 	public Omhullende getOmhullende() {
-		// TODO Auto-generated method stub
-		return null;
+		int p1 = Math.min(this.hoekPunt1.getX(), this.hoekPunt2.getX());
+		int p2 = Math.min(p1, this.hoekPunt3.getX());
+		int p3 = Math.min(this.hoekPunt1.getY(), this.hoekPunt2.getY());
+		int p4 = Math.min(p3, this.hoekPunt3.getY());
+		Punt p = new Punt(p2, p4);
+		int h1 = Math.max(this.hoekPunt1.getX(), this.hoekPunt2.getX());
+		int h2 = Math.max(h1, this.hoekPunt2.getX());
+		int h3 = Math.max(this.hoekPunt1.getY(), this.hoekPunt2.getY());
+		int h4 = Math.max(h3, this.hoekPunt3.getY());
+		Punt h = new Punt(h2, h4);
+		int breedte = Math.abs(p.getX()-h.getX());
+		int hoogte = Math.abs(p.getY() - h.getY());
+		
+		Omhullende omhullende = new Omhullende(p, breedte, hoogte);
+		return omhullende;
 	}
 	
 

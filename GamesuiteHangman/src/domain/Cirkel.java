@@ -46,13 +46,15 @@ public class Cirkel extends Vorm {
 
 	@Override
 	public String toString() {
-		return "Cirkel met radius" + radius + "en middelpunt" + middelpunt;
+		return "Cirkel met radius" + radius + "en middelpunt" + middelpunt ;
 	}
 
 	@Override
 	public Omhullende getOmhullende() {
-		// TODO Auto-generated method stub
-		return null;
+		Punt p = new Punt(this.middelpunt.getX()-this.radius, this.middelpunt.getY()-radius);
+		Omhullende omhullende = new Omhullende(p, radius+radius, radius+radius);
+		return omhullende;
+		
 	}
 	
 	

@@ -75,9 +75,14 @@ public class Omhullende {
 	}
 
 	public String toString() {
-		return "Rechthoek: positie: " + this.getLinkerBovenhoek() + " - breedte: " + this.getBreedte() + " - hoogte: "
-				+ this.getHoogte() + "\n" + "- omhullende: " + linkerBovenhoek + "- " + breedte + " - " + hoogte;
+		//return "Rechthoek: positie: " + this.getLinkerBovenhoek() + " - breedte: " + this.getBreedte() + " - hoogte: "
+			//	+ this.getHoogte() + "\n" + "- omhullende: " + linkerBovenhoek + "- " + breedte + " - " + hoogte;
+		return "- Omhullende: " + linkerBovenhoek + "- " + breedte + " - " + hoogte;
 	}
+
+	public Omhullende getOmhullende() {
+		return null;
+	} 
 	
 	
 
