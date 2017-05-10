@@ -84,6 +84,27 @@ public class OmhullendeTest {
 		assertFalse(omhullende.equals(null));
 	}
 	
+	@Test
+	public void minimale_X_moet_gelijk_zijn_aan_X_coordinaat_van_linkerbovenhoek(){
+		Omhullende omhullende = new Omhullende(linkerBovenhoek,breedte,hoogte);
+		assertEquals(omhullende.getMinimaleX(), linkerBovenhoek.getX());
+	}
 	
+	@Test
+	public void minimale_Y_moet_gelijk_zijn_aan_Y_coordinaat_van_linkerbovenhoek(){
+		Omhullende omhullende = new Omhullende(linkerBovenhoek,breedte,hoogte);
+		assertEquals(omhullende.getMinimaleY(), linkerBovenhoek.getY());
+	}
 	
+	@Test
+	public void maximale_X_moet_gelijk_zijn_aan_X_coordinaat_van_linkerbovenhoek_plus_breedte(){
+		Omhullende omhullende = new Omhullende(linkerBovenhoek,breedte,hoogte);
+		assertEquals(omhullende.getMaximaleX(), linkerBovenhoek.getX()+breedte);
+	}
+	
+	@Test
+	public void maximale_Y_moet_gelijk_zijn_aan_Y_coordinaat_van_linkerbovenhoek_plus_hoogte(){
+		Omhullende omhullende = new Omhullende(linkerBovenhoek,breedte,hoogte);
+		assertEquals(omhullende.getMaximaleY(), linkerBovenhoek.getY()+hoogte);
+	}
 }
