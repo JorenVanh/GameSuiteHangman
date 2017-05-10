@@ -43,4 +43,10 @@ public class LijnStuk extends Vorm {
 	public String toString() {
 		return "(" + startpunt + ", " + eindpunt + ")";
 	}
+
+	@Override
+	public Omhullende getOmhullende() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

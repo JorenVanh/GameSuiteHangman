@@ -35,6 +35,11 @@ public class Tekening {
 		if (vorm==null){
 			throw new DomainException("De vorm mag niet null zijn");
 		}
+		int i =0;
+		for(Vorm v : tekening){
+			tekening.get(i).equals(v);		
+		}
+		
 		tekening.add(vorm);
 	}
 	
@@ -58,6 +63,8 @@ public class Tekening {
 			i++;
 		}	
 	}
+
+	
 	
 	
 
