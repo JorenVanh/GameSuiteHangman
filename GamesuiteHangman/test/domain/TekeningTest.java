@@ -145,4 +145,5 @@ public class TekeningTest {
 		return huisMetSchouwZonderDeur;
 	}
 
+	//public void voegToe_gooit_exception_als_
 }

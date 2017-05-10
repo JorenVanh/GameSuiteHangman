@@ -8,6 +8,8 @@ public abstract class Vorm {
 		}
 		else return true;
 	}
+	
+	public abstract Omhullende getOmhullende();
 		
 
 }

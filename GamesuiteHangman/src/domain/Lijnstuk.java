@@ -1,6 +1,6 @@
 package domain;
 
-public class LijnStuk extends Vorm{
+public class LijnStuk extends Vorm {
 	private Punt startpunt;
 	private Punt eindpunt;
 	private Punt punt = new Punt();
@@ -29,17 +29,22 @@ public class LijnStuk extends Vorm{
 	public boolean equals(Object object) {
 		boolean resultaat = false;
 		if (object instanceof LijnStuk) {
+
 			LijnStuk figuur = (LijnStuk) object;
-			if( figuur.getStartpunt().equals(figuur.getEindpunt())){
-				return true;
+			if (this.getStartpunt().equals(figuur.getStartpunt()) || this.getEindpunt().equals(figuur.getEindpunt())) {
+				resultaat = true;
 			}
-			}
-		System.out.println(resultaat);
-		
+		}
 		return resultaat;
 	}
 
 	public String toString() {
 		return "(" + startpunt + ", " + eindpunt + ")";
+	}
+
+	@Override
+	public Omhullende getOmhullende() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
