@@ -35,8 +35,6 @@ public class LijnStuk extends Vorm {
 				resultaat = true;
 			}
 		}
-		System.out.println(resultaat);
-
 		return resultaat;
 	}
 
