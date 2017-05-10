@@ -61,4 +61,8 @@ public class Rechthoek extends Vorm {
 	public String toString(){
 		return "Rechthoek: positie: " + this.getLinkerBovenhoek() + " - breedte: " + this.getBreedte() + " - hoogte: " + this.getHoogte();
 	}
+	
+	public String getOmhullende(){
+		return this.toString() + "\n- omhullende: " + linkerBovenhoek + "- " + breedte +  " - " + hoogte;
+	}
 }
