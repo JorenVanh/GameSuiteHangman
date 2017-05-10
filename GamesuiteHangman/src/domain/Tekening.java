@@ -98,5 +98,14 @@ public class Tekening {
 		return false;
 	}
 	
+	@Override
+	public String toString(){
+		String tekst="Tekening met naam "+getNaam()+" Bestaat uit "+(getAantalVormen())+" vormen:";
+		for (Vorm v:tekening){
+			tekst=tekst+"\n"+v.toString();
+		}
+		return tekst;
+	}
+	
 
 }
