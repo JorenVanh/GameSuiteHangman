@@ -28,7 +28,7 @@ public class TekeningTest {
 		raambalk2 = new LijnStuk(new Punt(250, 220), new Punt(250, 280));
 		schouwNietInTekening = new Rechthoek(new Punt(150, 150), 20,40);
 	}
-
+	
 	@Test
 	public void Tekening_moet_een_tekening_aanmaken_met_een_geldige_naam_en_0_vormen() {
 		Tekening huis = new Tekening("huis");
@@ -66,6 +66,7 @@ public class TekeningTest {
 	
 	@Test
 	public void equals_moet_false_teruggeven_als_parameter_null(){
+		
 		Tekening huis = createHuisZonderShouw();
 		assertFalse(huis.equals(null));
 	}
@@ -79,6 +80,7 @@ public class TekeningTest {
 	
 	@Test
 	public void equals_moet_false_teruggeven_als_parameter_tekening_is_met_zelfde_aantal_vormen_ander_vorm(){
+		
 		Tekening huis = createHuisZonderShouw();
 		Tekening huisMetSchouwZonderDeur = createHuisMetSchouwZonderDeur();
 		assertFalse(huis.equals(huisMetSchouwZonderDeur));
@@ -91,15 +93,19 @@ public class TekeningTest {
 		huisMetSchouwZonderDeur.verwijder(schouwNietInTekening);
 		huisMetSchouwZonderDeur.voegToe(deur);
 		assertTrue(huis.equals(huisMetSchouwZonderDeur));
+		
 	}
+	
 	
 	@Test
 	public void equals_moet_true_teruggeven_alsparameter_tekening_is_met_zelfde_aantal_vormen_zelfde_volgorde(){
+		
 		Tekening huis = createHuisZonderShouw();
 		Tekening huisMetSchouw = createHuisMetSchouw();
 		huisMetSchouw.verwijder(schouwNietInTekening);
 		assertTrue(huis.equals(huisMetSchouw));
 	}
+	
 
 
 	public Tekening createHuisMetSchouw() {

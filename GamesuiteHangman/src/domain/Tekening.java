@@ -1,6 +1,7 @@
 package domain;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Tekening {
 	private String naam;
@@ -11,10 +12,7 @@ public class Tekening {
 	private ArrayList<Vorm> tekening;
 	
 	public Tekening(String n){
-		if (n.trim().isEmpty() || n == null){
-			throw new DomainException("De naam is niet correct");
-		}
-		this.naam = n;
+		setNaam(n);
 		tekening = new ArrayList<>();
 	}
 
@@ -22,14 +20,14 @@ public class Tekening {
 		return naam;
 	}
 
-	/* 
+	
 	private void setNaam(String naam) {
-		if (naam.trim().isEmpty() || naam == null){
-			throw new DomainException("De naam is niet correct");
+		if (naam == null || naam.trim().isEmpty() ){
+			throw new IllegalArgumentException("De naam is niet correct");
 		}
 		this.naam = naam;
 	}
-	*/
+	
 	
 	public void voegToe(Vorm vorm){
 		if (vorm==null){
@@ -54,18 +52,51 @@ public class Tekening {
 		return tekening.size();
 	}
 	
-	public void verwijderVorm(Vorm vorm){
+	public void verwijder(Vorm vorm){
 		int i=0;
+		int tv=tekening.size();
 		for (Vorm v: tekening) {
-			if (v.equals(vorm)){
-				tekening.remove(i);
+			if (vorm.equals(v)){
+				tv=i;
 			}
 			i++;
-		}	
+		}
+		if (tv!=tekening.size()){
+			tekening.remove(tv);
+		}
 	}
 
 	
 	
+	public boolean bevat(Vorm vorm){
+		
+		for (Vorm v: tekening) {
+			if (v.equals(vorm)){
+	
+				return true;
+				
+			}
+		}
+		return false;
+	}
+	
+	@Override
+	public boolean equals(Object o){
+		if (o instanceof Tekening){
+			Tekening t = (Tekening) o;
+			if (t.getAantalVormen()!=tekening.size()){
+				return false;
+			}
+			for (Vorm v: tekening){
+				if(!t.bevat(v)){
+					return false;
+				}
+			}
+			
+			return true;
+		}
+		return false;
+	}
 	
 
 }
