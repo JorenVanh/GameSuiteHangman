@@ -1,5 +1,6 @@
 package domain;
 
+import java.awt.Graphics;
 import java.awt.HeadlessException;
 
 public class Driehoek extends Vorm{
@@ -65,6 +66,9 @@ public class Driehoek extends Vorm{
 		return null;
 	}
 	
+	public void teken(Graphics graphics){
+		
+	}
 
 	
 

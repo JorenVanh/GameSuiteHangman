@@ -1,5 +1,7 @@
 package domain;
 
+import java.awt.Graphics;
+
 public class Cirkel extends Vorm {
 	private int radius;
 	private Punt middelpunt;
@@ -55,6 +57,9 @@ public class Cirkel extends Vorm {
 		return null;
 	}
 	
+	public void teken(Graphics graphics){
+		
+	}
 	
 	
 	

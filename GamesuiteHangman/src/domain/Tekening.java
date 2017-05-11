@@ -37,8 +37,7 @@ public class Tekening {
 		if (vorm.getOmhullende().getLinkerBovenhoek().getX()<min_x || vorm.getOmhullende().getLinkerBovenhoek().getY()>max_y
 			|| (vorm.getOmhullende().getLinkerBovenhoek().getX()+vorm.getOmhullende().getBreedte())>max_x
 			|| (vorm.getOmhullende().getLinkerBovenhoek().getY()-vorm.getOmhullende().getHoogte())<min_y ){
-			throw new DomainException("De vorm past niet in de tekening");
-						
+			throw new DomainException("De vorm past niet in de tekening");			
 		}
 		int i =0;
 		for(Vorm v : tekening){

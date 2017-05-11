@@ -1,6 +1,6 @@
 package domain;
 
-
+import java.awt.Graphics;
 
 public class Rechthoek extends Vorm {
 	private int breedte;
@@ -66,5 +66,9 @@ public class Rechthoek extends Vorm {
 	public Omhullende getOmhullende() {
 		return null;
 
+	}
+	
+	public void teken(Graphics graphics){
+		
 	}
 }
