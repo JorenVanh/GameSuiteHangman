@@ -46,8 +46,14 @@ public class LijnStuk extends Vorm {
 
 	@Override
 	public Omhullende getOmhullende() {
-		// TODO Auto-generated method stub
-		return null;
+		int iks = Math.min(this.startpunt.getX(), this.eindpunt.getX());
+		int ei = Math.min(this.startpunt.getY(), this.eindpunt.getY());
+		int breedte = Math.abs(startpunt.getX()-eindpunt.getX());
+		int hoogte = Math.abs(startpunt.getY()- eindpunt.getY());
+		Punt p = new Punt(iks,ei);
+		Omhullende omhullende = new Omhullende(p, breedte, hoogte);
+		return omhullende;
+
 	}
 	
 	public void teken(Graphics graphics){
