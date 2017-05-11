@@ -60,6 +60,7 @@ public class Cirkel extends Vorm implements Drawable{
 		
 	}
 	
+	@Override
 	public void teken(Graphics graphics){
 		int x=getMiddelpunt().getX();
 		int y=getMiddelpunt().getY();
