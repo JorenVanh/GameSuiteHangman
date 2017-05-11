@@ -2,9 +2,10 @@ package domain;
 
 import java.awt.Graphics;
 
-public class Cirkel extends Vorm {
+public class Cirkel extends Vorm implements Drawable{
 	private int radius;
 	private Punt middelpunt;
+	
 	
 	public Cirkel(Punt middelpunt, int radius){
 		setRadius(radius);
@@ -60,7 +61,12 @@ public class Cirkel extends Vorm {
 	}
 	
 	public void teken(Graphics graphics){
-		
+		int x=getMiddelpunt().getX();
+		int y=getMiddelpunt().getY();
+		int r=getRadius();
+		x = x-(r/2);
+		y = y-(r/2);
+		graphics.fillOval(x,y,r,r);
 	}
 	
 	

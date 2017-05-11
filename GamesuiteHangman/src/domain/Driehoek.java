@@ -3,7 +3,7 @@ package domain;
 import java.awt.Graphics;
 import java.awt.HeadlessException;
 
-public class Driehoek extends Vorm{
+public class Driehoek extends Vorm implements Drawable{
 	private Punt hoekPunt1, hoekPunt2, hoekPunt3;
 	
 	public Driehoek(Punt hoekPunt1, Punt hoekPunt2, Punt hoekPunt3){
@@ -80,7 +80,9 @@ public class Driehoek extends Vorm{
 	}
 	
 	public void teken(Graphics graphics){
-		
+		int[] xwaarden=new int[] {hoekPunt1.getX(),hoekPunt2.getX(),hoekPunt3.getX()};
+		int[] ywaarden=new int[] {hoekPunt1.getY(),hoekPunt2.getY(),hoekPunt3.getY()};
+		graphics.drawPolygon(xwaarden, ywaarden, 3);
 	}
 
 	
