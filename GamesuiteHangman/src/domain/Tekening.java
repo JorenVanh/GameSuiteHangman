@@ -113,7 +113,6 @@ public class Tekening implements Drawable{
 
 	@Override
 	public void teken(Graphics g) {
-		// TODO Auto-generated method stub
 		for (Vorm v:tekening){
 			v.teken();
 		}
