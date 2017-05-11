@@ -1,5 +1,7 @@
 package domain;
 
+import java.awt.Graphics;
+
 public abstract class Vorm {
 	String output = "";
 	public boolean equals(Object O){
@@ -22,7 +24,7 @@ public abstract class Vorm {
 		return output + getOmhullende().toString();
 	}
 	
-	public void teken(){};
+	public void teken(Graphics graphics){};
 	
 	
 		

@@ -114,7 +114,7 @@ public class Tekening implements Drawable{
 	@Override
 	public void teken(Graphics g) {
 		for (Vorm v:tekening){
-			v.teken();
+			v.teken(g);
 		}
 		
 	}
