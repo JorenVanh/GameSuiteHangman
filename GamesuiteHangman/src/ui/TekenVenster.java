@@ -8,7 +8,7 @@ import java.awt.Graphics2D;
 
 import domain.Cirkel;
 import domain.Driehoek;
-import domain.LijnStuk;
+import domain.Lijnstuk;
 import domain.Punt;
 import domain.Rechthoek;
 import domain.Tekening;
@@ -39,7 +39,7 @@ public class TekenVenster extends Canvas {
 		graphics2D.setStroke(new BasicStroke(5));
 
 		Cirkel boomkruin = new Cirkel(new Punt(70, 70), 60);
-		LijnStuk boomstam = new LijnStuk(new Punt(70, 130), new Punt(70, 380));
+		Lijnstuk boomstam = new Lijnstuk(new Punt(70, 130), new Punt(70, 380));
 		Rechthoek gebouw = new Rechthoek(new Punt(100, 200), 200, 180);
 		Driehoek dak = new Driehoek(new Punt(100, 200), new Punt(300, 200),
 				new Punt(200, 100));
