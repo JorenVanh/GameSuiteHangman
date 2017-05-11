@@ -2,7 +2,7 @@ package domain;
 
 import java.awt.Graphics;
 
-public class Rechthoek extends Vorm {
+public class Rechthoek extends Vorm implements Drawable{
 	private int breedte;
 	private int hoogte;
 	private Punt linkerBovenhoek;
@@ -68,7 +68,8 @@ public class Rechthoek extends Vorm {
 		return omhullende; 
 	}
 	
+	@Override
 	public void teken(Graphics graphics){
-		
+		graphics.drawRect(linkerBovenhoek.getX(), linkerBovenhoek.getY(), getBreedte(), getHoogte());
 	}
 }

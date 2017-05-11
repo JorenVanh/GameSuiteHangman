@@ -2,12 +2,13 @@ package domain;
 
 import java.awt.Graphics;
 
-public class LijnStuk extends Vorm {
+public class Lijnstuk extends Vorm implements Drawable{
 	private Punt startpunt;
 	private Punt eindpunt;
 	private Punt punt = new Punt();
+	//comment
 
-	public LijnStuk(Punt startpunt, Punt eindpunt) {
+	public Lijnstuk(Punt startpunt, Punt eindpunt) {
 		setStartEnEindPunten(startpunt, eindpunt);
 
 	}
@@ -30,9 +31,9 @@ public class LijnStuk extends Vorm {
 
 	public boolean equals(Object object) {
 		boolean resultaat = false;
-		if (object instanceof LijnStuk) {
+		if (object instanceof Lijnstuk) {
 
-			LijnStuk figuur = (LijnStuk) object;
+			Lijnstuk figuur = (Lijnstuk) object;
 			if (this.getStartpunt().equals(figuur.getStartpunt()) || this.getEindpunt().equals(figuur.getEindpunt())) {
 				resultaat = true;
 			}
@@ -57,6 +58,6 @@ public class LijnStuk extends Vorm {
 	}
 	
 	public void teken(Graphics graphics){
-		
+		graphics.drawLine(getStartpunt().getX(), getStartpunt().getY(),getEindpunt().getX(), getEindpunt().getY());
 	}
 }

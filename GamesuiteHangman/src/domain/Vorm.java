@@ -22,6 +22,8 @@ public abstract class Vorm {
 		return output + getOmhullende().toString();
 	}
 	
+	public void teken(){};
+	
 	
 		
 

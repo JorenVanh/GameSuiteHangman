@@ -1,9 +1,10 @@
 package domain;
 
+import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Tekening {
+public class Tekening implements Drawable{
 	private String naam;
 	private static final int min_x = 0;
 	private static final int min_y = 0;
@@ -75,12 +76,9 @@ public class Tekening {
 	
 	
 	public boolean bevat(Vorm vorm){
-		
 		for (Vorm v: tekening) {
 			if (v.equals(vorm)){
-	
 				return true;
-				
 			}
 		}
 		return false;
@@ -111,6 +109,15 @@ public class Tekening {
 			tekst=tekst+"\n"+v.toString();
 		}
 		return tekst;
+	}
+
+	@Override
+	public void teken(Graphics g) {
+		// TODO Auto-generated method stub
+		for (Vorm v:tekening){
+			v.teken();
+		}
+		
 	}
 	
 
