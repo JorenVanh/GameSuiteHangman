@@ -18,7 +18,7 @@ public class WoordenLezer {
 		while (scanner.hasNextLine()) { 
 			Scanner scannerLijn = new Scanner(scanner.nextLine());
 			String woord = scannerLijn.next();
-			if(woord.equals(null) || woord.trim().isEmpty()){
+			if(woord==null || woord.trim().isEmpty()){
 				throw new DbException("woord mag niet leeg zijn");
 			}
 			lezer.voegToe(woord);
