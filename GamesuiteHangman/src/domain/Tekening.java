@@ -118,6 +118,11 @@ public class Tekening implements Drawable{
 		}
 		
 	}
+
+	public Object getAantalOnzichtbaar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 }
