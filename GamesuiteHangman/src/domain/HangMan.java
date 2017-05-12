@@ -1,5 +1,7 @@
 package domain;
 
+import db.WoordenLijst;
+
 public class HangMan {
 
 	public HangMan(Speler geldigeSpeler, WoordenLijst geldigeWoordenlijst) {

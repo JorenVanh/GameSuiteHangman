@@ -1,9 +1,7 @@
-package domain.db;
+package db;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
-import domain.WoordenLijst;
 
 public class WoordenLezer {
 	private String bestandsNaam;
@@ -12,7 +10,7 @@ public class WoordenLezer {
 		this.bestandsNaam = bestandsNaam;
 	}
 	
-	public WoordenLijst lees() throws FileNotFoundException{
+	public WoordenLijst lees(){
 		WoordenLijst lezer = new WoordenLijst();
 		Scanner scanner = new Scanner(bestandsNaam);
 		while (scanner.hasNextLine()) { 

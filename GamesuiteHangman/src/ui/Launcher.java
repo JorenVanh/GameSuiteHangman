@@ -2,7 +2,8 @@ package ui;
 
 import javax.swing.JOptionPane;
 
-
+import db.WoordenLezer;
+import db.WoordenLijst;
 import domain.Punt;
 import domain.Speler;
 
@@ -18,7 +19,9 @@ public class Launcher {
 		ui.showMenu();
 		JOptionPane.showMessageDialog(null, "... zal binnekort spelen", speler.getNaam(),
 				JOptionPane.INFORMATION_MESSAGE);
-
-		// Punt punt = new Punt();
+		WoordenLezer lezer = new WoordenLezer("hangman.txt");
+		WoordenLijst woordenLijst = lezer.lees();
+		
+		
 	}
 }

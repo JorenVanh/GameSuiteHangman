@@ -1,4 +1,4 @@
-package domain.db;
+package db;
 
 public class DbException extends RuntimeException {
 	

@@ -1,8 +1,10 @@
-package domain;
+package db;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import domain.DomainException;
 
 public class WoordenLijst {
 	private List<String> woorden;
